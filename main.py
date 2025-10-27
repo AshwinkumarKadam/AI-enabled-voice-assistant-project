@@ -11,7 +11,7 @@ from google import genai
 
 recognizer = sr.Recognizer()
 engine =  pyttsx3.init()
-newsapi ="2f78f41dc0ac4f2086ec2aa356f081a2"
+newsapi ="put you news api key here"
 
 
 def speak(text):
@@ -20,7 +20,7 @@ def speak(text):
 
 
 def aiProcess(command):
-    client = genai.Client(api_key="AIzaSyCW5oRD0g1lVbqc_SFsypck49CBNGS5W8o")
+    client = genai.Client(api_key="put you api key here")
 
     completion = client.models.generate_content(
         model="gemini-2.5-flash",
@@ -84,8 +84,6 @@ if __name__ ==  "__main__":
 
                     processcommand(command)
                     
-
-
         except sr.UnknownValueError:
             print("could not understand ")
 
